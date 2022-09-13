@@ -11,22 +11,26 @@ public class TestPrime
         num2=sc.nextInt();
         if((num1<num2) && (num1>=2))
         {
-        for( int i=num1;i<=num2;i++)
+        	int i=num1;
+        while( i<=num2)
         {
         	flag=0;
-        	for(int j=2;j<=i/2;j++)
+        	int j=2;
+        	while(j<=i/2)
         	{
         		if(i%j==0)
             	{
             		flag=1;
             		break;
             	}
+        		j++;
         	}
         	if((num1==2)||(flag==0))
         	{
         	count++;
         	System.out.println(i);
         	}
+        	i++;
         }
         }
         System.out.println("total number of prime number are "+count);
